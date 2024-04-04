@@ -223,7 +223,7 @@ def receive_permutation(item, permutation, rank_start=0, rank_end=100):
     return item
 
 
-def permutation_pipeline(item=None, rank_start=0, rank_end=100, model_name='gpt-3.5-turbo', api_key=None):
+def permutation_pipeline_new(item=None, rank_start=0, rank_end=100, model_name='gpt-3.5-turbo', api_key=None):
     messages = create_permutation_instruction(item=item, rank_start=rank_start, rank_end=rank_end,
                                               model_name=model_name)  # chan
     print(messages)
