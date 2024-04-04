@@ -226,6 +226,7 @@ def receive_permutation(item, permutation, rank_start=0, rank_end=100):
 def permutation_pipeline(item=None, rank_start=0, rank_end=100, model_name='gpt-3.5-turbo', api_key=None):
     messages = create_permutation_instruction(item=item, rank_start=rank_start, rank_end=rank_end,
                                               model_name=model_name)  # chan
+    print(messages)
     permutation = run_llm(messages, api_key=api_key, model_name=model_name)
     item = receive_permutation(item, permutation, rank_start=rank_start, rank_end=rank_end)
     return item
